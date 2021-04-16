@@ -30,15 +30,16 @@ As mentioned above, the proportion of males vs females in this dataset is fairly
 ![image](https://user-images.githubusercontent.com/8799324/115026143-24835c80-9e90-11eb-92b7-f071fa7946cd.png)
 We can aslo see that users from California far outweigh the users from the other states:
 ![image](https://user-images.githubusercontent.com/8799324/115026265-4977cf80-9e90-11eb-80ae-7cd7d775e475.png)
-From the plot below, we can see Sparkify's popularity based on the day of the week:
+From the plot below, we can see Sparkify's popularity based on the day of the week (more popular during the weekdays):
 ![image](https://user-images.githubusercontent.com/8799324/115026549-a07da480-9e90-11eb-8588-9a4092f5dea9.png)
 
 ## Conclusion
 
 ### Reflection
-This project contained all of the aspects of a data science project. The process started from loading the data from a json file into a pyspark dataframe. Before the data can be used for any analysis, data cleansing was performed. During this step, the time column was converted into a more interpretable format by Python. The location was also split between city and state. It was interesting to see that these two fields were combined in the original dataset. An exploratory data analysis was then conducted in order to get a good understanding of the data before developing any models. From the exploratory data analysis, it was realized that there was a need for feature engineering. The purpose of the feature engineering step was to prepare the final features that would go into the model. After converting gender and latest level from categorical to numerical data, the modeling process begins. Three baseline models are created and one of them is selected for tuning. 
+This project contained all of the aspects of a data science project. The process started from loading the data from a json file into a pyspark dataframe. Before the data can be used for any analysis, data cleansing was performed. During this step, the time column was converted into a more interpretable format by Python. The location was also split by city and state. It was interesting to see that these two fields were combined in the original dataset. An exploratory data analysis was then conducted in order to get a good understanding of the data before developing any models. From the exploratory data analysis, it was realized that there was a need for feature engineering. The purpose of the feature engineering step was to prepare the final features that would go into the model. After converting gender and latest level from categorical to numerical data, the modeling process begins. Three baseline models are created and one of them is selected for tuning (decision tree in this case). The tuning aspect was particularly challenging because of the long processing times.
 
 ### Improvement
+There are several ways this analysis can be improved. Firstly, we can create more features to improve the performance of the model through more feature engineering. Also, during the hyperparameter tuning process, we can extend the range of the parameters with the trade off of longer processing times.
 
 ## Running the App 
 - Install the requirements using the requirements.txt file
@@ -61,6 +62,8 @@ This project contained all of the aspects of a data science project. The process
 
 
 ## Acknowledgements
-
+[Udacity](https://www.udacity.com/)
+[Pyspark Documentation](https://spark.apache.org/docs/0.9.0/index.html)
+[Flast Documentation](https://flask.palletsprojects.com/en/1.1.x/quickstart/)
 
 
