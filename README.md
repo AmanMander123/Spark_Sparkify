@@ -13,5 +13,10 @@ The problem that is being solved in this case is determining whether or not a pa
 6. Hyperparameter tuning 
 7. Model Evaluation
 
-# Metrics
+## Metrics
 The evaluation metric used to measure model performance is the f1-score. This is because this is a classification problem and dataset is imbalanced, thus the f1-score would be the most appropriate metric in this scenario. 
+
+## Running the App 
+- Install the requirements using the requirements.txt file
+- Navigate to the Spark_Sparkify directory and run 'flask run'
+- Follow the instructions on the terminal to run the web app
