@@ -64,6 +64,6 @@ There are several ways this analysis can be improved. Firstly, we can create mor
 ## Acknowledgements
 [Udacity](https://www.udacity.com/)  
 [Pyspark Documentation](https://spark.apache.org/docs/0.9.0/index.html)  
-[Flast Documentation](https://flask.palletsprojects.com/en/1.1.x/quickstart/)  
+[Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/quickstart/)  
 
 
