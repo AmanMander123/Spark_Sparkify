@@ -15,6 +15,8 @@ The problem that is being solved in this case is determining whether or not a pa
 6. Hyperparameter tuning 
 7. Model Evaluation
 
+For additional references on the process mentioned above, you can follow [this link](https://www.kdnuggets.com/2016/03/data-science-process.html).
+
 ### Metrics
 The evaluation metric used to measure model performance is the f1-score. This is because this is a classification problem and dataset is imbalanced, thus the f1-score would be the most appropriate metric in this scenario. 
 
@@ -32,6 +34,18 @@ We can aslo see that users from California far outweigh the users from the other
 ![image](https://user-images.githubusercontent.com/8799324/115026265-4977cf80-9e90-11eb-80ae-7cd7d775e475.png)
 From the plot below, we can see Sparkify's popularity based on the day of the week (more popular during the weekdays):
 ![image](https://user-images.githubusercontent.com/8799324/115026549-a07da480-9e90-11eb-8588-9a4092f5dea9.png)
+
+### Data Modelling
+To develop the baseline model, I experimented with the following three models using the default hyperparamters. [source](https://spark.apache.org/docs/latest/ml-classification-regression.html):
+1. Logistic Regression (pros: simple interpretation, quick - cons: lacks performance)
+2. Decision Tree Classifier (pros: simple interpretation, quick - cons: prone to overfitting)
+3. Random Forest Classifier (pros: good performance, ensemble method therefore less prone to overfitting - cons: difficult interpretation)
+
+It turns out that the Decision Tree Classifier had the best performance with an f1-score of .80. I then ran the hyperparameter tuning process using [k-fold cross validation](https://spark.apache.org/docs/latest/ml-tuning.html). Unfortunately, the f1-score decreased to 0.73 after the tuning. This can be due to several reasons mentioned in more detail below. 
+
+## Results
+The final model that is used to make predictions is the baseline model for the Decision Tree Classifier (f1-score of 0.80). This result can be improved by further tuning the model but given it's time intensive constraint - this will be left for a future iteration.
+
 
 ## Conclusion
 
